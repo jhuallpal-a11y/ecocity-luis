@@ -1,0 +1,473 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>EcoCity | Construyendo ciudades sostenibles</title>
+
+    <meta name="description" content="EcoCity promueve ciudades más limpias, verdes y sostenibles mediante la conciencia ambiental y la gestión responsable de residuos.">
+
+    <link rel="stylesheet" href="estilos.css">
+
+    <style>
+        :root {
+            --verde: #237a4b;
+            --verde-oscuro: #164b35;
+            --verde-claro: #eaf5eb;
+            --blanco: #ffffff;
+            --texto: #26352d;
+            --gris: #637067;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            font-family: Arial, Helvetica, sans-serif;
+            color: var(--texto);
+            background: #f8fbf7;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+        }
+
+        .ec-header {
+            background: var(--blanco);
+            border-bottom: 1px solid #e4ece4;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+
+        .ec-nav {
+            max-width: 1150px;
+            margin: auto;
+            padding: 16px 24px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .ec-logo {
+            color: var(--verde);
+            font-size: 27px;
+            font-weight: 800;
+            letter-spacing: -1px;
+        }
+
+        .ec-links {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 22px;
+        }
+
+        .ec-links a {
+            color: #34473a;
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .ec-links a:hover {
+            color: var(--verde);
+        }
+
+        .ec-hero {
+            background:
+                linear-gradient(90deg, rgba(13, 48, 32, .88),
+                rgba(20, 74, 45, .57)),
+                url("https://images.unsplash.com/photo-1518005020951-eccb494ad742?auto=format&fit=crop&w=1800&q=85")
+                center 55% / cover;
+            color: white;
+            padding: 100px 24px;
+        }
+
+        .ec-hero-content {
+            max-width: 1100px;
+            margin: auto;
+        }
+
+        .ec-etiqueta {
+            display: inline-block;
+            padding: 7px 13px;
+            background: rgba(255, 255, 255, .15);
+            border: 1px solid rgba(255, 255, 255, .4);
+            border-radius: 30px;
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .ec-hero h1 {
+            max-width: 760px;
+            font-size: clamp(38px, 6vw, 66px);
+            line-height: 1.08;
+            margin: 22px 0;
+            letter-spacing: -2px;
+        }
+
+        .ec-hero p {
+            max-width: 650px;
+            font-size: 18px;
+            color: #f0f6f0;
+            margin-bottom: 30px;
+        }
+
+        .ec-botones {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 13px;
+        }
+
+        .ec-boton {
+            display: inline-block;
+            padding: 13px 21px;
+            border-radius: 8px;
+            font-weight: 700;
+            transition: transform .2s, background .2s;
+        }
+
+        .ec-boton:hover {
+            transform: translateY(-2px);
+        }
+
+        .ec-boton-principal {
+            background: #a9e6a9;
+            color: #173d29;
+        }
+
+        .ec-boton-secundario {
+            color: white;
+            border: 1px solid rgba(255, 255, 255, .75);
+        }
+
+        .ec-seccion {
+            max-width: 1100px;
+            margin: auto;
+            padding: 75px 24px;
+        }
+
+        .ec-titulo {
+            text-align: center;
+            max-width: 720px;
+            margin: 0 auto 38px;
+        }
+
+        .ec-titulo span {
+            color: var(--verde);
+            font-weight: 800;
+            text-transform: uppercase;
+            font-size: 12px;
+            letter-spacing: 2px;
+        }
+
+        .ec-titulo h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
+            margin: 10px 0;
+            color: var(--verde-oscuro);
+        }
+
+        .ec-titulo p {
+            color: var(--gris);
+        }
+
+        .ec-grid {
+            display: grid;
+            grid-template-columns: repeat(3, minmax(0, 1fr));
+            gap: 22px;
+        }
+
+        .ec-card {
+            background: white;
+            border: 1px solid #e4ece4;
+            border-radius: 15px;
+            padding: 27px;
+            box-shadow: 0 8px 24px rgba(30, 70, 40, .05);
+        }
+
+        .ec-icono {
+            width: 52px;
+            height: 52px;
+            display: grid;
+            place-items: center;
+            background: var(--verde-claro);
+            border-radius: 13px;
+            font-size: 27px;
+        }
+
+        .ec-card h3 {
+            color: var(--verde-oscuro);
+            margin-bottom: 8px;
+        }
+
+        .ec-card p {
+            color: var(--gris);
+            font-size: 15px;
+        }
+
+        .ec-destacado {
+            background: var(--verde-claro);
+        }
+
+        .ec-destacado-contenido {
+            max-width: 1100px;
+            margin: auto;
+            padding: 65px 24px;
+            display: grid;
+            grid-template-columns: 1.1fr .9fr;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .ec-destacado h2 {
+            color: var(--verde-oscuro);
+            font-size: clamp(28px, 4vw, 40px);
+            line-height: 1.2;
+        }
+
+        .ec-destacado p {
+            color: #53665a;
+        }
+
+        .ec-lista {
+            list-style: none;
+            padding: 0;
+        }
+
+        .ec-lista li {
+            margin: 13px 0;
+        }
+
+        .ec-imagen {
+            width: 100%;
+            min-height: 280px;
+            height: 100%;
+            max-height: 380px;
+            object-fit: cover;
+            border-radius: 18px;
+        }
+
+        .ec-acciones {
+            background: white;
+            text-align: center;
+        }
+
+        .ec-acciones-contenido {
+            max-width: 800px;
+            margin: auto;
+            padding: 70px 24px;
+        }
+
+        .ec-acciones h2 {
+            font-size: clamp(28px, 4vw, 40px);
+            color: var(--verde-oscuro);
+            line-height: 1.2;
+        }
+
+        .ec-acciones p {
+            color: var(--gris);
+            margin-bottom: 25px;
+        }
+
+        .ec-boton-verde {
+            background: var(--verde);
+            color: white;
+        }
+
+        .ec-footer {
+            background: #143d2c;
+            color: #e9f4eb;
+            text-align: center;
+            padding: 27px 20px;
+            font-size: 14px;
+        }
+
+        .ec-footer p {
+            margin: 5px 0;
+        }
+
+        @media (max-width: 760px) {
+            .ec-nav {
+                align-items: flex-start;
+                flex-direction: column;
+            }
+
+            .ec-links {
+                gap: 12px 18px;
+            }
+
+            .ec-hero {
+                padding: 75px 22px;
+            }
+
+            .ec-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .ec-destacado-contenido {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header class="ec-header">
+        <nav class="ec-nav">
+            <a class="ec-logo" href="index.html">🌱 EcoCity</a>
+
+            <div class="ec-links">
+                <a href="index.html">Inicio</a>
+                <a href="#nosotros">Nosotros</a>
+                <a href="#soluciones">Soluciones</a>
+                <a href="ciudad.html">Ciudad sostenible</a>
+                <a href="acciones.html">Acciones</a>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section class="ec-hero">
+            <div class="ec-hero-content">
+                <span class="ec-etiqueta">
+                    INNOVACIÓN PARA UN FUTURO VERDE
+                </span>
+
+                <h1>Ciudades más verdes, un futuro mejor.</h1>
+
+                <p>
+                    EcoCity es una iniciativa que promueve la conciencia
+                    ambiental, el manejo responsable de residuos y la
+                    recuperación de espacios verdes para construir
+                    comunidades más sostenibles.
+                </p>
+
+                <div class="ec-botones">
+                    <a class="ec-boton ec-boton-principal"
+                       href="ciudad.html">
+                        Explorar EcoCity →
+                    </a>
+
+                    <a class="ec-boton ec-boton-secundario"
+                       href="acciones.html">
+                        Conocer las acciones
+                    </a>
+                </div>
+            </div>
+        </section>
+
+        <section class="ec-seccion" id="nosotros">
+            <div class="ec-titulo">
+                <span>Nuestra propuesta</span>
+                <h2>Una ciudad sostenible comienza con nosotros</h2>
+                <p>
+                    Pequeñas decisiones pueden generar grandes cambios.
+                    Queremos impulsar hábitos responsables que ayuden a
+                    cuidar el ambiente y mejorar los espacios donde vivimos.
+                </p>
+            </div>
+
+            <div class="ec-grid">
+                <article class="ec-card">
+                    <div class="ec-icono">♻️</div>
+                    <h3>Gestión de residuos</h3>
+                    <p>
+                        Fomentamos la separación de residuos, el reciclaje
+                        y la reducción de la basura que generamos.
+                    </p>
+                </article>
+
+                <article class="ec-card">
+                    <div class="ec-icono">🌳</div>
+                    <h3>Espacios verdes</h3>
+                    <p>
+                        Promovemos el cuidado de parques, jardines y áreas
+                        verdes que contribuyen al bienestar de la comunidad.
+                    </p>
+                </article>
+
+                <article class="ec-card">
+                    <div class="ec-icono">💚</div>
+                    <h3>Conciencia ambiental</h3>
+                    <p>
+                        Impulsamos la participación ciudadana y la educación
+                        ambiental para construir mejores hábitos.
+                    </p>
+                </article>
+            </div>
+        </section>
+
+        <section class="ec-destacado" id="soluciones">
+            <div class="ec-destacado-contenido">
+                <div>
+                    <span class="ec-etiqueta"
+                          style="background:#d3ebd5;color:#205c39;border-color:#c1dfc4">
+                        CAMBIEMOS NUESTRO ENTORNO
+                    </span>
+
+                    <h2>El cambio empieza con acciones concretas</h2>
+
+                    <p>
+                        Una ciudad sostenible necesita espacios limpios,
+                        áreas verdes protegidas y personas comprometidas
+                        con el cuidado de los recursos naturales.
+                    </p>
+
+                    <ul class="ec-lista">
+                        <li>🌿 Cuidar las plantas y áreas verdes.</li>
+                        <li>♻️ Separar los residuos para reciclar.</li>
+                        <li>🤝 Participar en iniciativas ambientales.</li>
+                    </ul>
+
+                    <a class="ec-boton ec-boton-verde"
+                       href="acciones.html">
+                        Descubrir acciones →
+                    </a>
+                </div>
+
+                <img
+                    class="ec-imagen"
+                    src="https://ecolife.zone/wp-content/uploads/2024/10/green_streets_incorporating_nature_and_sustainability_into_pedestrian_spaces-1024x578.webp"
+                    alt="Calle con vegetación y espacios verdes"
+                    loading="lazy"
+                >
+            </div>
+        </section>
+
+        <section class="ec-acciones">
+            <div class="ec-acciones-contenido">
+                <span>🌎 Nuestro compromiso</span>
+
+                <h2>Construyamos juntos una EcoCity</h2>
+
+                <p>
+                    Conoce nuestra propuesta de ciudad sostenible y descubre
+                    cómo contribuir a un entorno más limpio, saludable y verde.
+                </p>
+
+                <a class="ec-boton ec-boton-verde"
+                   href="ciudad.html">
+                    Conocer la ciudad sostenible →
+                </a>
+            </div>
+        </section>
+    </main>
+
+    <footer class="ec-footer">
+        <p><strong>🌱 EcoCity</strong> — Construyendo un futuro sostenible.</p>
+        <p>Proyecto de innovación y conciencia ambiental.</p>
+    </footer>
+
+</body>
+</html>
