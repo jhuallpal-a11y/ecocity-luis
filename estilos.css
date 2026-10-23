@@ -217,3 +217,1069 @@ footer a {
         padding: 38px 6%;
     }
 }
+
+/* Tarjetas ecológicas interactivas */
+.tarjeta-interactiva {
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-interactiva:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(20, 100, 60, 0.15);
+}
+
+/* Imagen de cada acción */
+.imagen-accion {
+    width: 100%;
+    height: 190px;
+    object-fit: cover;
+    display: block;
+    border-radius: 12px;
+    margin-bottom: 18px;
+}
+
+/* Botón para descubrir consejos */
+.boton-accion {
+    background: #176b45;
+    color: white;
+    border: none;
+    border-radius: 25px;
+    padding: 12px 20px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.boton-accion:hover {
+    background: #0d5032;
+    transform: scale(1.04);
+}
+
+/* Mensaje que aparece al pulsar */
+.mensaje-accion {
+    margin-top: 15px;
+    padding: 14px;
+    background: #e4f6e9;
+    border-left: 4px solid #238653;
+    border-radius: 8px;
+    color: #174d32;
+}
+
+.mensaje-accion p {
+    margin-bottom: 0;
+}
+
+/* Calculadora de reciclaje EcoCity */
+.calculadora-reciclaje {
+    background: #f2faf4;
+    padding: 40px 20px;
+    border-radius: 16px;
+}
+
+.calculadora {
+    max-width: 600px;
+    margin: 24px auto 0;
+    padding: 24px;
+    background: #ffffff;
+    border-radius: 16px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.calculadora label {
+    font-weight: 600;
+    margin-top: 8px;
+    color: #174d32;
+}
+
+.calculadora select,
+.calculadora input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5ce;
+    border-radius: 8px;
+    font: inherit;
+    box-sizing: border-box;
+}
+
+.calculadora .boton-accion {
+    margin-top: 12px;
+}
+
+.resultado-reciclaje {
+    margin-top: 12px;
+    padding: 16px;
+    background: #e4f6e9;
+    color: #174d32;
+    border-radius: 10px;
+    font-weight: 600;
+}
+
+.nota-reciclaje {
+    font-size: 13px;
+    color: #58665d;
+    margin-top: 12px;
+}
+
+/* ===== PORTADA RENOVADA DE ECOCITY ===== */
+
+.portada.portada-eco {
+    position: relative;
+    min-height: 430px;
+    padding: 64px 7%;
+    margin-bottom: 36px;
+    border-radius: 24px;
+    overflow: hidden;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 24px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(7, 42, 25, 0.88),
+            rgba(7, 42, 25, 0.60),
+            rgba(7, 42, 25, 0.20)
+        ),
+        url("https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=1800&q=85")
+        center / cover no-repeat;
+
+    color: white;
+    box-sizing: border-box;
+}
+
+.portada-eco .contenido-portada {
+    max-width: 650px;
+    position: relative;
+    z-index: 1;
+}
+
+.portada-eco .etiqueta {
+    display: inline-block;
+    color: #e5ffe9;
+    background: rgba(255, 255, 255, 0.14);
+    padding: 8px 13px;
+    border-radius: 999px;
+    font-size: 0.8rem;
+    font-weight: 700;
+    letter-spacing: 0.06em;
+}
+
+.portada-eco h1 {
+    color: white;
+    font-size: clamp(2.2rem, 5vw, 4.2rem);
+    line-height: 1.08;
+    margin: 22px 0 16px;
+}
+
+.portada-eco h1 span {
+    display: block;
+    color: #b8f3c8;
+}
+
+.portada-eco .contenido-portada > p {
+    max-width: 470px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    color: #f1fff3;
+}
+
+.portada-eco .botones-portada {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px;
+    margin-top: 26px;
+}
+
+.portada-eco .boton {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    text-decoration: none;
+    background: #b9f2c8;
+    color: #15452b;
+    padding: 14px 20px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: transform 0.2s, background 0.2s;
+}
+
+.portada-eco .boton:hover {
+    transform: translateY(-2px);
+    background: #d3f9dc;
+}
+
+.portada-eco .boton-secundario {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    color: white;
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    background: rgba(255, 255, 255, 0.10);
+    padding: 13px 18px;
+    border-radius: 999px;
+    font-weight: 700;
+    transition: background 0.2s;
+}
+
+.portada-eco .boton-secundario:hover {
+    background: rgba(255, 255, 255, 0.22);
+}
+
+.portada-eco .sello-portada {
+    flex: 0 0 155px;
+    width: 155px;
+    height: 155px;
+    border: 1px solid rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.12);
+    backdrop-filter: blur(5px);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+    color: white;
+    position: relative;
+    z-index: 1;
+}
+
+.portada-eco .sello-portada > span {
+    font-size: 2.1rem;
+}
+
+.portada-eco .sello-portada strong {
+    font-size: 1rem;
+}
+
+.portada-eco .sello-portada small {
+    margin-top: 4px;
+    color: #e3f8e8;
+}
+
+/* Adaptación para celulares */
+
+@media (max-width: 700px) {
+    .portada.portada-eco {
+        min-height: auto;
+        padding: 42px 24px;
+        border-radius: 18px;
+    }
+
+    .portada-eco .sello-portada {
+        display: none;
+    }
+
+    .portada-eco h1 {
+        font-size: clamp(2rem, 9vw, 3rem);
+    }
+
+    .portada-eco .contenido-portada > p {
+        font-size: 1rem;
+    }
+
+    .portada-eco .botones-portada {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .portada-eco .boton,
+    .portada-eco .boton-secundario {
+        width: 100%;
+        box-sizing: border-box;
+        justify-content: center;
+    }
+}
+
+/* ===== MEJORA VISUAL DE LAS TARJETAS ECOCITY ===== */
+
+.tarjetas {
+    gap: 28px;
+}
+
+.tarjeta-interactiva {
+    padding: 18px;
+    border: 1px solid #dcebdd;
+    border-radius: 20px;
+    background: linear-gradient(180deg, #ffffff 0%, #f9fdf9 100%);
+    box-shadow: 0 6px 20px rgba(23, 107, 67, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tarjeta-interactiva:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(23, 107, 67, 0.16);
+}
+
+.imagen-accion {
+    height: 220px;
+    object-fit: cover;
+    border-radius: 14px;
+    margin-bottom: 18px;
+    transition: transform 0.4s ease;
+}
+
+.tarjeta-interactiva:hover .imagen-accion {
+    transform: scale(1.02);
+}
+
+.tarjeta-interactiva h3 {
+    font-size: 22px;
+    margin-top: 8px;
+    margin-bottom: 10px;
+}
+
+.tarjeta-interactiva p {
+    color: #52675a;
+    line-height: 1.7;
+}
+
+.boton-accion {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    border-radius: 30px;
+    background: #176b43;
+    color: white;
+    box-shadow: 0 4px 10px rgba(23, 107, 67, 0.15);
+}
+
+.boton-accion:focus-visible {
+    outline: 3px solid #9cddb1;
+    outline-offset: 3px;
+}
+
+.mensaje-accion {
+    line-height: 1.7;
+    animation: aparecer-mensaje 0.3s ease;
+}
+
+@keyframes aparecer-mensaje {
+    from {
+        opacity: 0;
+        transform: translateY(-6px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Ajustes para celulares */
+
+@media (max-width: 600px) {
+    .tarjetas {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+
+    .tarjeta-interactiva {
+        padding: 15px;
+    }
+
+    .imagen-accion {
+        height: 210px;
+    }
+
+    .tarjeta-interactiva h3 {
+        font-size: 20px;
+    }
+
+    .boton-accion {
+        width: 100%;
+        box-sizing: border-box;
+    }
+}
+
+/* ===== DISEÑO DEL RETO ECOLÓGICO ===== */
+
+#reto.reto {
+    padding: 55px 7%;
+    background: linear-gradient(135deg, #e8f7e9, #f5fbf4);
+}
+
+.encabezado-reto {
+    max-width: 650px;
+    margin: 0 auto 28px;
+    text-align: center;
+}
+
+.etiqueta-reto {
+    display: inline-block;
+    padding: 7px 13px;
+    border-radius: 30px;
+    background: #d4efda;
+    color: #176b43;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.encabezado-reto h2 {
+    margin: 14px 0 8px;
+    color: #145b39;
+    font-size: clamp(28px, 4vw, 38px);
+}
+
+.encabezado-reto p {
+    color: #52675a;
+}
+
+.panel-reto {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 28px;
+    background: white;
+    border: 1px solid #dcebdd;
+    border-radius: 22px;
+    box-shadow: 0 12px 35px rgba(23, 107, 67, 0.09);
+}
+
+.resumen-reto {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 16px;
+}
+
+.texto-progreso {
+    color: #176b43;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+#progreso {
+    margin: 6px 0 16px;
+    color: #234536;
+    font-weight: bold;
+}
+
+.circulo-progreso {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 68px;
+    height: 68px;
+    border: 5px solid #b8e5c4;
+    border-radius: 50%;
+    color: #176b43;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+.barra-progreso {
+    width: 100%;
+    height: 13px;
+    overflow: hidden;
+    border-radius: 20px;
+    background: #e7eee8;
+}
+
+.relleno-progreso {
+    width: 0%;
+    height: 100%;
+    border-radius: inherit;
+    background: linear-gradient(90deg, #39a96b, #176b43);
+    transition: width 0.5s ease;
+}
+
+.lista-reto {
+    margin-top: 24px;
+}
+
+.lista-reto .opcion {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    max-width: none;
+    margin: 12px 0;
+    padding: 16px;
+    border: 1px solid #e0ebe1;
+    border-radius: 12px;
+    background: #fbfdfb;
+    transition: background 0.2s, border-color 0.2s;
+}
+
+.lista-reto .opcion:has(input:checked) {
+    background: #e9f8ec;
+    border-color: #72bd87;
+}
+
+.lista-reto .opcion input {
+    width: 19px;
+    height: 19px;
+    flex-shrink: 0;
+    accent-color: #176b43;
+}
+
+.lista-reto .opcion span {
+    flex: 1;
+}
+
+.mensaje-reto {
+    margin: 22px 0 0;
+    padding: 15px;
+    border-radius: 12px;
+    background: #e4f6e9;
+    color: #176b43;
+    font-weight: bold;
+    text-align: center;
+}
+
+@media (max-width: 600px) {
+    #reto.reto {
+        padding: 38px 6%;
+    }
+
+    .panel-reto {
+        padding: 20px 16px;
+    }
+
+    .circulo-progreso {
+        width: 58px;
+        height: 58px;
+        font-size: 17px;
+    }
+
+    .lista-reto .opcion {
+        padding: 13px 10px;
+    }
+}
+
+/* ===== EC CITY: PAGINA NUESTRO IMPACTO ===== */
+
+.impacto-portada {
+    position: relative;
+    display: flex;
+    align-items: center;
+    min-height: 440px;
+    padding: 75px 8%;
+    overflow: hidden;
+    background:
+        linear-gradient(90deg, rgba(7, 48, 31, .88), rgba(7, 48, 31, .35)),
+        url("https://images.unsplash.com/photo-1470071459604-3b5ec3a7fe05?auto=format&fit=crop&w=1800&q=85")
+        center 48% / cover no-repeat;
+    color: white;
+}
+
+.impacto-contenido {
+    max-width: 720px;
+}
+
+.impacto-etiqueta {
+    display: inline-block;
+    margin-bottom: 18px;
+    padding: 8px 14px;
+    border: 1px solid rgba(255,255,255,.45);
+    border-radius: 30px;
+    background: rgba(255,255,255,.12);
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.impacto-portada h1 {
+    max-width: 680px;
+    margin: 0 0 20px;
+    font-size: clamp(34px, 5vw, 55px);
+    line-height: 1.12;
+}
+
+.impacto-portada p {
+    max-width: 570px;
+    margin-bottom: 28px;
+    color: #edf7ef;
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.impacto-boton,
+.impacto-final a {
+    display: inline-block;
+    padding: 14px 22px;
+    border-radius: 10px;
+    background: #c5f0ce;
+    color: #145b39;
+    font-weight: bold;
+    text-decoration: none;
+    transition: transform .25s, background .25s;
+}
+
+.impacto-boton:hover,
+.impacto-final a:hover {
+    transform: translateY(-3px);
+    background: white;
+}
+
+.impacto-introduccion {
+    max-width: 850px;
+    margin: 0 auto;
+    padding: 65px 7% 45px;
+    text-align: center;
+}
+
+.impacto-subtitulo {
+    color: #25834d;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.8px;
+}
+
+.impacto-introduccion h2,
+.impacto-cabecera h2,
+.impacto-beneficios h2 {
+    margin: 13px 0;
+    color: #174e34;
+    font-size: clamp(27px, 4vw, 36px);
+    line-height: 1.25;
+}
+
+.impacto-introduccion p,
+.impacto-cabecera p {
+    color: #5b6c61;
+    font-size: 16px;
+    line-height: 1.8;
+}
+
+.impacto-metas {
+    padding: 55px 7%;
+    background: #f1f8f1;
+}
+
+.impacto-cabecera {
+    max-width: 650px;
+    margin: 0 auto 32px;
+    text-align: center;
+}
+
+.impacto-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 24px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.impacto-tarjeta {
+    padding: 30px 25px;
+    border: 1px solid #e0ebdf;
+    border-radius: 18px;
+    background: white;
+    box-shadow: 0 8px 24px rgba(25, 76, 45, .06);
+    transition: transform .25s, box-shadow .25s;
+}
+
+.impacto-tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 15px 30px rgba(25, 76, 45, .12);
+}
+
+.impacto-icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 58px;
+    height: 58px;
+    margin-bottom: 20px;
+    border-radius: 16px;
+    background: #e3f5e5;
+    font-size: 29px;
+}
+
+.impacto-tarjeta h3 {
+    margin: 0 0 12px;
+    color: #195b38;
+    font-size: 21px;
+}
+
+.impacto-tarjeta p {
+    color: #596b5e;
+    line-height: 1.8;
+}
+
+.impacto-tipo {
+    display: inline-block;
+    margin-top: 8px;
+    padding: 7px 11px;
+    border-radius: 20px;
+    background: #edf7ee;
+    color: #267044;
+    font-size: 12px;
+    font-weight: bold;
+}
+
+.impacto-beneficios {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    gap: 50px;
+    max-width: 1150px;
+    margin: 0 auto;
+    padding: 75px 7%;
+}
+
+.impacto-beneficios-texto > p {
+    color: #596b5e;
+    line-height: 1.9;
+}
+
+.impacto-lista {
+    display: grid;
+    gap: 18px;
+}
+
+.impacto-beneficio {
+    display: flex;
+    align-items: flex-start;
+    gap: 15px;
+    padding: 19px;
+    border: 1px solid #e3ece3;
+    border-radius: 14px;
+    background: #fff;
+}
+
+.impacto-beneficio > span {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: #dff4e3;
+    color: #176b43;
+    font-weight: bold;
+}
+
+.impacto-beneficio h3 {
+    margin: 2px 0 7px;
+    color: #20553a;
+    font-size: 17px;
+}
+
+.impacto-beneficio p {
+    margin: 0;
+    color: #647268;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+.impacto-final {
+    padding: 55px 7%;
+    background: linear-gradient(135deg, #145b39, #247c4c);
+    color: white;
+    text-align: center;
+}
+
+.impacto-final > span {
+    font-size: 42px;
+}
+
+.impacto-final h2 {
+    margin: 14px 0;
+    font-size: clamp(26px, 4vw, 35px);
+}
+
+.impacto-final p {
+    max-width: 620px;
+    margin: 0 auto 25px;
+    color: #e5f4e8;
+    line-height: 1.8;
+}
+
+@media (max-width: 760px) {
+    .impacto-portada {
+        min-height: 420px;
+        padding: 55px 6%;
+    }
+
+    .impacto-tarjetas {
+        grid-template-columns: 1fr;
+        max-width: 500px;
+    }
+
+    .impacto-beneficios {
+        grid-template-columns: 1fr;
+        gap: 25px;
+        padding: 50px 6%;
+    }
+
+    .impacto-metas {
+        padding: 45px 6%;
+    }
+
+    .impacto-introduccion {
+        padding: 48px 6% 35px;
+    }
+}
+
+/* ===== DISEÑO DEL REPORTE DE RECICLAJE ===== */
+
+.reporte-reciclaje {
+    max-width: 1000px;
+    margin: 35px auto 0;
+    padding: 28px;
+    border: 1px solid #dcebdd;
+    border-radius: 20px;
+    background: #fff;
+    box-shadow: 0 10px 30px rgba(23, 107, 67, .08);
+}
+
+.encabezado-reporte {
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.encabezado-reporte > span {
+    color: #21834b;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+}
+
+.encabezado-reporte h3 {
+    margin: 10px 0;
+    color: #175c39;
+    font-size: clamp(25px, 4vw, 32px);
+}
+
+.encabezado-reporte p,
+.nota-reciclaje {
+    color: #617166;
+    line-height: 1.7;
+}
+
+.resumen-reciclaje {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: 15px;
+    margin-bottom: 25px;
+}
+
+.dato-reciclaje {
+    padding: 20px 15px;
+    border: 1px solid #dcebdd;
+    border-radius: 14px;
+    background: #f1f8f1;
+}
+
+.dato-reciclaje span,
+.dato-reciclaje strong {
+    display: block;
+}
+
+.dato-reciclaje span {
+    margin-bottom: 10px;
+    color: #52675a;
+    font-size: 14px;
+}
+
+.dato-reciclaje strong {
+    color: #176b43;
+    font-size: clamp(19px, 3vw, 27px);
+    overflow-wrap: anywhere;
+}
+
+.tabla-reporte-contenedor {
+    width: 100%;
+    overflow-x: auto;
+    margin-bottom: 20px;
+}
+
+.tabla-reporte {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+
+.tabla-reporte th,
+.tabla-reporte td {
+    padding: 13px 12px;
+    border-bottom: 1px solid #e5eee6;
+    white-space: nowrap;
+}
+
+.tabla-reporte th {
+    background: #e9f5eb;
+    color: #175c39;
+    font-size: 13px;
+}
+
+.tabla-reporte td {
+    color: #405448;
+    font-size: 14px;
+}
+
+.tabla-reporte tbody tr:hover {
+    background: #f7fbf7;
+}
+
+.boton-eliminar {
+    padding: 8px 11px;
+    border: 0;
+    border-radius: 8px;
+    background: #fdebea;
+    color: #a12c27;
+    cursor: pointer;
+}
+
+.boton-eliminar:hover {
+    background: #f8d4d1;
+}
+
+.reporte-reciclaje > .boton-accion {
+    margin: 5px 8px 5px 0;
+}
+
+@media (max-width: 600px) {
+    .reporte-reciclaje {
+        padding: 20px 12px;
+    }
+
+    .resumen-reciclaje {
+        grid-template-columns: 1fr;
+    }
+
+    .dato-reciclaje {
+        padding: 15px;
+    }
+}
+
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #reporte-reciclaje,
+    #reporte-reciclaje * {
+        visibility: visible;
+    }
+
+    #reporte-reciclaje {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        max-width: none;
+        margin: 0;
+        padding: 10px;
+        border: none;
+        box-shadow: none;
+    }
+
+    #boton-limpiar-reporte,
+    #boton-imprimir-reporte,
+    .boton-eliminar {
+        display: none !important;
+    }
+
+    .tabla-reporte th {
+        background: #e9f5eb !important;
+        print-color-adjust: exact;
+        -webkit-print-color-adjust: exact;
+    }
+}
+
+/* ===== COMPARACIÓN VISUAL DE ECOCITY ===== */
+.impacto-comparacion {
+    padding: 75px 8%;
+    background: #f1f7f0;
+}
+
+.comparacion-tarjetas {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 28px;
+    max-width: 1100px;
+    margin: 35px auto 0;
+}
+
+.comparacion-tarjeta {
+    overflow: hidden;
+    background: #ffffff;
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(25, 70, 42, 0.10);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.comparacion-tarjeta:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 14px 30px rgba(25, 70, 42, 0.16);
+}
+
+.comparacion-tarjeta img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: cover;
+}
+
+.comparacion-texto {
+    padding: 24px;
+}
+
+.comparacion-etiqueta {
+    display: inline-block;
+    padding: 6px 12px;
+    border-radius: 20px;
+    background: #e3efdf;
+    color: #285d36;
+    font-size: 0.78rem;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+}
+
+.comparacion-texto h3 {
+    margin: 14px 0 10px;
+    color: #244b31;
+}
+
+.comparacion-texto p {
+    margin: 0;
+    color: #536257;
+    line-height: 1.7;
+}
+
+
+.comparacion-nota {
+    max-width: 850px;
+    margin: 24px auto 0;
+    color: #617064;
+    font-size: 0.88rem;
+    text-align: center;
+    line-height: 1.6;
+}
+
+/* Ajustes para celulares */
+@media (max-width: 700px) {
+    .impacto-comparacion {
+        padding: 50px 6%;
+    }
+
+    .comparacion-tarjetas {
+        grid-template-columns: 1fr;
+        gap: 22px;
+    }
+
+    .comparacion-tarjeta img {
+        height: 200px;
+    }
+}
+
+
+
+
