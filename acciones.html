@@ -29,16 +29,39 @@
 
 
     <main>
-        <section class="portada">
-            <p class="etiqueta">CUIDEMOS NUESTRO PLANETA</p>
-            <h1>Pequeñas acciones,<br> grandes cambios</h1>
-            <p>
-                Cada hábito cuenta. Descubre cómo tus acciones
-                diarias pueden ayudar a construir una ciudad
-                más limpia, verde y sostenible.
-            </p>
-            <a class="boton" href="#consejos">Descubrir consejos ↓</a>
-        </section>
+        
+<section class="portada portada-eco">
+    <div class="contenido-portada">
+        <span class="etiqueta">🌎 EL CAMBIO EMPIEZA CONTIGO</span>
+
+        <h1>
+            Una ciudad más verde
+            <span>comienza contigo.</span>
+        </h1>
+
+        <p>
+            Pequeñas acciones. Menos residuos.
+            Un futuro mejor para todos.
+        </p>
+
+        <div class="botones-portada">
+            <a class="boton" href="#consejos">
+                Explorar acciones <span>→</span>
+            </a>
+
+            <a class="boton-secundario" href="ciudad.html">
+                🌱 Conoce nuestro impacto
+            </a>
+        </div>
+    </div>
+
+    <div class="sello-portada">
+        <span>🌿</span>
+        <strong>Tu ciudad</strong>
+        <small>Tu responsabilidad</small>
+    </div>
+</section>
+
 
         <section id="consejos" class="seccion">
             <h2>Empieza con pequeños cambios</h2>
@@ -47,74 +70,311 @@
             </p>
 
             <div class="tarjetas">
-                <article class="tarjeta">
-                    <div class="icono">💧</div>
-                    <h3>Ahorra agua</h3>
-                    <p>
-                        Cierra el grifo mientras te cepillas
-                        y evita desperdiciar agua al lavar.
-                    </p>
-                </article>
+                
+<article class="tarjeta tarjeta-interactiva">
+    <img
+        class="imagen-accion"
+        src="https://images.unsplash.com/photo-1559827260-dc66d52bef19?auto=format&fit=crop&w=700&q=80"
+        alt="Agua limpia para cuidar el planeta"
+    >
 
-                <article class="tarjeta">
-                    <div class="icono">💡</div>
-                    <h3>Ahorra energía</h3>
-                    <p>
-                        Apaga las luces cuando salgas de una
-                        habitación y aprovecha la luz natural.
-                    </p>
-                </article>
+    <h3>💧 Ahorra agua</h3>
 
-                <article class="tarjeta">
-                    <div class="icono">♻️</div>
-                    <h3>Reduce tus residuos</h3>
-                    <p>
-                        Usa bolsas reutilizables y separa
-                        los residuos según las indicaciones locales.
-                    </p>
-                </article>
+    <p>
+        Cierra el grifo mientras te cepillas
+        y evita desperdiciar agua al lavar.
+    </p>
 
-                <article class="tarjeta">
-                    <div class="icono">🌱</div>
-                    <h3>Cuida las áreas verdes</h3>
-                    <p>
-                        Respeta los parques, no arrojes basura
-                        y ayuda a mantener limpios los espacios públicos.
-                    </p>
-                </article>
+    <button class="boton-accion" onclick="mostrarAccion('agua')">
+        Descubrir acción
+    </button>
+
+    <div id="mensaje-agua" class="mensaje-accion" hidden>
+        <strong>¡Tu acción de hoy!</strong>
+        <p>Cierra el grifo mientras te cepillas los dientes.
+        Cada gota que ahorras cuenta.</p>
+    </div>
+</article>
+
+
+                
+<article class="tarjeta tarjeta-interactiva">
+    <img
+        class="imagen-accion"
+        src="https://images.unsplash.com/photo-1497440001374-f26997328c1b?auto=format&fit=crop&w=700&q=80"
+        alt="Ahorro de energía en el hogar"
+    >
+
+    <h3>💡 Ahorra energía</h3>
+
+    <p>
+        Apaga las luces cuando salgas de una
+        habitación y aprovecha la luz natural.
+    </p>
+
+    <button class="boton-accion" onclick="mostrarAccion('energia')">
+        Descubrir acción
+    </button>
+
+    <div id="mensaje-energia" class="mensaje-accion" hidden>
+        <strong>¡Tu acción de hoy!</strong>
+        <p>
+            Apaga las luces que no utilizas y desconecta
+            los aparatos que no necesitas.
+            ¡Ahorrar energía también ayuda al planeta!
+        </p>
+    </div>
+</article>
+
+
+                
+<article class="tarjeta tarjeta-interactiva">
+    <img
+        class="imagen-accion"
+        src="https://images.unsplash.com/photo-1532996122724-e3c354a0b15b?auto=format&fit=crop&w=700&q=80"
+        alt="Residuos separados para reducir la contaminación"
+    >
+
+    <h3>♻️ Reduce tus residuos</h3>
+
+    <p>
+        Evita los productos desechables, reutiliza
+        los envases y compra solo lo necesario.
+    </p>
+
+    <button class="boton-accion" onclick="mostrarAccion('residuos')">
+        Descubrir acción
+    </button>
+
+    <div id="mensaje-residuos" class="mensaje-accion" hidden>
+        <strong>¡Tu acción de hoy!</strong>
+        <p>
+            Lleva una bolsa reutilizable al comprar,
+            usa una botella recargable y evita los
+            plásticos de un solo uso.
+        </p>
+    </div>
+</article>
+
+
+                
+<article class="tarjeta tarjeta-interactiva">
+    <img
+        class="imagen-accion"
+        src="https://images.unsplash.com/photo-1441974231531-c6227db76b6e?auto=format&fit=crop&w=700&q=80"
+        alt="Bosque verde y naturaleza"
+    >
+
+    <h3>🌱 Cuida las áreas verdes</h3>
+
+    <p>
+        Respeta los parques, no arrojes basura
+        y ayuda a mantener limpios los espacios públicos.
+    </p>
+
+    <button class="boton-accion" onclick="mostrarAccion('areas')">
+        Descubrir acción
+    </button>
+
+    <div id="mensaje-areas" class="mensaje-accion" hidden>
+        <strong>¡Tu acción de hoy!</strong>
+        <p>
+            Recoge tus residuos, cuida las plantas y evita
+            pisar las zonas verdes. ¡Ayuda a mantener tu ciudad limpia!
+        </p>
+    </div>
+</article>
+
             </div>
         </section>
+        
 
-        <section id="reto" class="reto">
-            <h2>Mi reto ecológico</h2>
-            <p>
-                Marca las acciones que te comprometes a practicar.
-            </p>
+<section id="calculadora-reciclaje" class="seccion calculadora-reciclaje">
+    <h2>♻️ Dale valor a tus residuos</h2>
 
+    <p class="introduccion">
+        Registra los materiales que vas a reciclar y descubre
+        cuánto podrías ganar al darles una segunda vida.
+    </p>
+
+    <div class="calculadora">
+        <label for="material">¿Qué material vas a reciclar?</label>
+
+        <select id="material">
+            <option value="plastico">Botellas de plástico PET</option>
+            <option value="carton">Cartón</option>
+            <option value="papel">Papel</option>
+            <option value="latas">Latas de aluminio</option>
+        </select>
+
+        <label for="peso">Peso del material (kg)</label>
+
+        <input
+            type="number"
+            id="peso"
+            min="0.1"
+            step="0.1"
+            placeholder="Ejemplo: 3"
+        >
+
+        <label for="precio">Precio por kilo (S/)</label>
+
+        <input
+            type="number"
+            id="precio"
+            min="0"
+            step="0.01"
+            placeholder="Ejemplo: 1.50"
+        >
+
+        <button
+            type="button"
+            class="boton-accion"
+            onclick="agregarAlReporte()">
+            ➕ Agregar al reporte
+        </button>
+
+        <p class="nota-reciclaje">
+            Puedes consultar el precio con tu reciclador local.
+            Los resultados son estimaciones y no garantizan un pago.
+        </p>
+    </div>
+
+    <div id="reporte-reciclaje" class="reporte-reciclaje">
+        <div class="encabezado-reporte">
+            <span>🌎 MI APORTE AL PLANETA</span>
+            <h3>Mi reporte de reciclaje</h3>
+            <p>Consulta los materiales que has registrado.</p>
+        </div>
+
+        <div class="resumen-reciclaje">
+            <article class="dato-reciclaje">
+                <span>⚖️ Peso total</span>
+                <strong id="peso-total">0 kg</strong>
+            </article>
+
+            <article class="dato-reciclaje">
+                <span>💰 Ganancia estimada</span>
+                <strong id="ganancia-total">S/ 0.00</strong>
+            </article>
+
+            <article class="dato-reciclaje">
+                <span>♻️ Registros</span>
+                <strong id="cantidad-registros">0</strong>
+            </article>
+        </div>
+
+        <div class="tabla-reporte-contenedor">
+            <table class="tabla-reporte">
+                <thead>
+                    <tr>
+                        <th>Material</th>
+                        <th>Peso</th>
+                        <th>Precio/kg</th>
+                        <th>Total</th>
+                        <th>Acción</th>
+                    </tr>
+                </thead>
+                <tbody id="lista-reporte">
+                    <tr id="reporte-vacio">
+                        <td colspan="5">
+                            Aún no tienes materiales registrados.
+                            ¡Agrega el primero!
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <button
+            type="button"
+            class="boton-accion"
+            id="boton-limpiar-reporte"
+            onclick="limpiarReporte()">
+            🗑️ Limpiar reporte
+        </button>
+
+        <button
+            type="button"
+            class="boton-accion"
+            id="boton-imprimir-reporte"
+            onclick="imprimirReporte()">
+            🖨️ Imprimir o guardar reporte
+        </button>
+
+        <p class="nota-reciclaje">
+            Los precios dependen del comprador, la limpieza y la calidad
+            de los materiales. El reporte no representa un pago confirmado.
+        </p>
+    </div>
+</section>
+
+
+
+        
+<section id="reto" class="reto">
+    <div class="encabezado-reto">
+        <span class="etiqueta-reto">🌎 TU COMPROMISO VERDE</span>
+        <h2>Mi reto ecológico</h2>
+        <p>
+            Cada pequeña acción cuenta.
+            Marca tus compromisos y mide tu progreso.
+        </p>
+    </div>
+
+    <div class="panel-reto">
+        <div class="resumen-reto">
+            <div>
+                <span class="texto-progreso">Tu progreso</span>
+                <p id="progreso" aria-live="polite">
+                    Has completado 0 de 4 acciones.
+                </p>
+            </div>
+
+            <div class="circulo-progreso" id="porcentaje-reto">
+                0%
+            </div>
+        </div>
+
+        <div
+            class="barra-progreso"
+            role="progressbar"
+            aria-label="Progreso del reto ecológico"
+            aria-valuemin="0"
+            aria-valuemax="4"
+            aria-valuenow="0"
+            id="barra-progreso">
+            <div class="relleno-progreso" id="relleno-progreso"></div>
+        </div>
+
+        <div class="lista-reto">
             <label class="opcion">
-                <input type="checkbox">
-                Ahorrar agua todos los días.
+                <input type="checkbox" class="accion-reto">
+                <span>💧 Ahorrar agua todos los días.</span>
             </label>
 
             <label class="opcion">
-                <input type="checkbox">
-                Apagar las luces que no necesito.
+                <input type="checkbox" class="accion-reto">
+                <span>💡 Apagar las luces que no necesito.</span>
             </label>
 
             <label class="opcion">
-                <input type="checkbox">
-                Evitar productos desechables.
+                <input type="checkbox" class="accion-reto">
+                <span>♻️ Evitar productos desechables.</span>
             </label>
 
             <label class="opcion">
-                <input type="checkbox">
-                Mantener limpios los espacios públicos.
+                <input type="checkbox" class="accion-reto">
+                <span>🌳 Mantener limpios los espacios públicos.</span>
             </label>
+        </div>
 
-            <p id="progreso" aria-live="polite">
-                Has completado 0 de 4 acciones.
-            </p>
-        </section>
+        <p id="mensaje-reto" class="mensaje-reto" aria-live="polite">
+            ¡Empieza con tu primera acción ecológica!
+        </p>
+    </div>
+</section>
+
     </main>
 
     <footer>
