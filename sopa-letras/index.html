@@ -1,0 +1,129 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sopa de Letras Ecológica | EcoCity</title>
+
+    <link rel="stylesheet" href="estilos.css">
+    <script src="juego.js" defer></script>
+</head>
+
+<body>
+
+    <header class="encabezado">
+        <div class="logo">🌱 EcoCity</div>
+        <p>Aprende jugando, cuida nuestro planeta</p>
+    </header>
+
+    <main class="contenedor">
+        
+<section id="pantalla-bienvenida" class="pantalla-bienvenida">
+    <div class="bienvenida-contenido">
+        <span class="bienvenida-icono">🌍</span>
+
+        <h2>¡Bienvenido a EcoCity!</h2>
+
+        <h3>Reto ecológico: Sopa de letras</h3>
+
+        <p>
+            Pon a prueba tus conocimientos sobre el medio ambiente.
+            Encuentra las 10 palabras escondidas antes de que termine el tiempo.
+        </p>
+
+        <div class="instrucciones">
+            <p>⭐ Cada palabra vale 10 puntos.</p>
+            <p>⏱️ Tienes 3 minutos para completar el reto.</p>
+            <p>🌱 Busca palabras relacionadas con nuestro planeta.</p>
+        </div>
+
+        <button id="boton-comenzar" class="boton-principal">
+            🚀 Comenzar aventura
+        </button>
+    </div>
+</section>
+
+
+        <section class="presentacion" id="presentacion" style="display: none;">
+            <span class="etiqueta">JUEGO ECOLÓGICO</span>
+
+            <h1>🌎 Sopa de Letras</h1>
+
+            <p>
+                Encuentra las palabras escondidas y demuestra
+                cuánto sabes sobre el cuidado del medio ambiente.
+            </p>
+        </section>
+
+        <section class="panel-juego" id="panel-juego" style="display: none;">
+
+            <div class="estadisticas">
+
+                <div class="estadistica">
+                    <span>⭐ Puntos</span>
+                    <strong id="puntos">0</strong>
+                </div>
+
+                <div class="estadistica">
+                    <span>⏱️ Tiempo</span>
+                    <strong id="tiempo">03:00</strong>
+                </div>
+
+                <div class="estadistica">
+                    <span>✅ Encontradas</span>
+                    <strong id="progreso">0/10</strong>
+                </div>
+
+            </div>
+
+            <div class="contenido-juego">
+
+                <div class="zona-tablero">
+
+                    <h2>Encuentra las palabras</h2>
+
+                    <div id="tablero" class="tablero">
+                        <!-- Las letras se generarán con JavaScript -->
+                    </div>
+
+                    <p id="mensaje" class="mensaje">
+                        ¡Selecciona las letras para encontrar una palabra!
+                    </p>
+
+                </div>
+
+                <aside class="zona-palabras">
+
+                    <h2>📋 Palabras por encontrar</h2>
+
+                    <ul id="lista-palabras">
+                        <!-- Las palabras se generarán con JavaScript -->
+                    </ul>
+
+                </aside>
+
+            </div>
+
+            <div class="controles">
+                <button id="boton-iniciar" class="boton-principal">
+                    ▶ Iniciar juego
+                </button>
+
+                <button id="boton-reiniciar" class="boton-secundario">
+                    ↻ Volver a jugar
+                </button>
+            </div>
+
+            <div id="resultado" class="resultado"></div>
+
+        </section>
+
+        <footer>
+            <p>🌿 EcoCity | Pequeñas acciones, grandes cambios</p>
+        </footer>
+
+    </main>
+
+</body>
+</html>
