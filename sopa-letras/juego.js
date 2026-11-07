@@ -419,10 +419,6 @@ function iniciarJuego() {
 // FINALIZAR JUEGO
 // ========================================
 
-// ========================================
-// FINALIZAR JUEGO
-// ========================================
-
 function finalizarJuego(victoria) {
 
     terminado = true;
