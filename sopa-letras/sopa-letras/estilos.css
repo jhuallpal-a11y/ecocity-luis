@@ -1,0 +1,562 @@
+
+/* CONFIGURACIÓN GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+    color: #263d30;
+    min-height: 100vh;
+}
+
+/* ENCABEZADO */
+.encabezado {
+    background: #176b45;
+    color: white;
+    padding: 22px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 3px 12px #00000018;
+}
+
+.logo {
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.encabezado p {
+    font-size: 14px;
+}
+
+/* CONTENEDOR PRINCIPAL */
+.contenedor {
+    width: 90%;
+    max-width: 1100px;
+    margin: 35px auto;
+}
+
+/* PRESENTACIÓN */
+.presentacion {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.etiqueta {
+    display: inline-block;
+    background: #d1f0dc;
+    color: #176b45;
+    padding: 7px 16px;
+    border-radius: 20px;
+    font-size: 12px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.presentacion h1 {
+    font-size: 38px;
+    margin: 15px 0;
+    color: #176b45;
+}
+
+.presentacion p {
+    color: #607568;
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+/* PANEL DEL JUEGO */
+.panel-juego {
+    background: white;
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 30px #245a3a15;
+}
+
+/* ESTADÍSTICAS */
+.estadisticas {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+    margin-bottom: 30px;
+}
+
+.estadistica {
+    background: #eff8f1;
+    padding: 18px;
+    border-radius: 12px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.estadistica span {
+    color: #607568;
+    font-size: 14px;
+}
+
+.estadistica strong {
+    color: #176b45;
+    font-size: 25px;
+}
+
+/* DISTRIBUCIÓN DEL JUEGO */
+.contenido-juego {
+    display: grid;
+    grid-template-columns: 1.5fr 1fr;
+    gap: 30px;
+}
+
+.zona-tablero h2,
+.zona-palabras h2 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: #245d3e;
+}
+
+/* TABLERO DE LETRAS */
+.tablero {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    gap: 5px;
+    max-width: 520px;
+    margin: auto;
+}
+
+.letra {
+    aspect-ratio: 1;
+    border: 1px solid #d7e9dc;
+    border-radius: 7px;
+    background: #f5faf6;
+    color: #245d3e;
+    font-size: clamp(11px, 2vw, 17px);
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: 0.2s;
+    user-select: none;
+}
+
+.letra:hover {
+    background: #d1f0dc;
+}
+
+.letra.seleccionada {
+    background: #4caf70;
+    color: white;
+}
+
+.letra.encontrada {
+    background: #176b45;
+    color: white;
+    border-color: #176b45;
+}
+
+/* LISTA DE PALABRAS */
+.zona-palabras {
+    background: #f5faf6;
+    border-radius: 14px;
+    padding: 22px;
+}
+
+#lista-palabras {
+    list-style: none;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+}
+
+#lista-palabras li {
+    padding: 11px;
+    background: white;
+    border-radius: 8px;
+    border: 1px solid #e0ece3;
+    font-size: 13px;
+    font-weight: 600;
+    color: #42634d;
+    text-align: center;
+}
+
+#lista-palabras li.encontrada {
+    background: #d8f2df;
+    color: #176b45;
+    text-decoration: line-through;
+    border-color: #a5d6b2;
+}
+
+/* MENSAJE */
+.mensaje {
+    text-align: center;
+    margin-top: 18px;
+    color: #607568;
+    font-size: 14px;
+    min-height: 22px;
+}
+
+/* BOTONES */
+.controles {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 30px;
+    flex-wrap: wrap;
+}
+
+.controles button {
+    padding: 13px 24px;
+    border: none;
+    border-radius: 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.boton-principal {
+    background: #176b45;
+    color: white;
+}
+
+.boton-principal:hover {
+    background: #105333;
+    transform: translateY(-2px);
+}
+
+.boton-secundario {
+    background: #e5f2e8;
+    color: #176b45;
+}
+
+.boton-secundario:hover {
+    background: #cde8d4;
+}
+
+/* RESULTADO */
+.resultado {
+    text-align: center;
+    margin-top: 22px;
+    font-size: 18px;
+    font-weight: bold;
+    color: #176b45;
+}
+
+/* PIE DE PÁGINA */
+footer {
+    text-align: center;
+    padding: 30px 10px;
+    color: #688272;
+    font-size: 13px;
+}
+
+/* ADAPTACIÓN A CELULARES */
+@media (max-width: 700px) {
+
+    .encabezado {
+        flex-direction: column;
+        gap: 8px;
+        text-align: center;
+    }
+
+    .presentacion h1 {
+        font-size: 29px;
+    }
+
+    .panel-juego {
+        padding: 18px;
+    }
+
+    .contenido-juego {
+        grid-template-columns: 1fr;
+    }
+
+    .estadisticas {
+        gap: 8px;
+    }
+
+    .estadistica {
+        padding: 12px 5px;
+    }
+
+    .estadistica span {
+        font-size: 11px;
+    }
+
+    .estadistica strong {
+        font-size: 20px;
+    }
+
+    .tablero {
+        gap: 3px;
+    }
+}
+
+/* COLORES DIFERENTES PARA CADA PALABRA ENCONTRADA */
+
+.letra.encontrada.color-0 {
+    background: #2196A6;
+    border-color: #2196A6;
+    color: white;
+}
+
+.letra.encontrada.color-1 {
+    background: #E5A52B;
+    border-color: #E5A52B;
+    color: white;
+}
+
+.letra.encontrada.color-2 {
+    background: #398B55;
+    border-color: #398B55;
+    color: white;
+}
+
+.letra.encontrada.color-3 {
+    background: #9464BD;
+    border-color: #9464BD;
+    color: white;
+}
+
+.letra.encontrada.color-4 {
+    background: #D87945;
+    border-color: #D87945;
+    color: white;
+}
+
+.letra.encontrada.color-5 {
+    background: #D65B83;
+    border-color: #D65B83;
+    color: white;
+}
+
+/* COLORES DE LA LISTA DE PALABRAS */
+
+#lista-palabras li.encontrada.color-0 {
+    background: #D9F1F3;
+    color: #167887;
+}
+
+#lista-palabras li.encontrada.color-1 {
+    background: #FFF0CB;
+    color: #9A6810;
+}
+
+#lista-palabras li.encontrada.color-2 {
+    background: #DDF1E2;
+    color: #286D40;
+}
+
+#lista-palabras li.encontrada.color-3 {
+    background: #EEE2F8;
+    color: #70439A;
+}
+
+#lista-palabras li.encontrada.color-4 {
+    background: #FBE5D9;
+    color: #A65328;
+}
+
+#lista-palabras li.encontrada.color-5 {
+    background: #F9DFE9;
+    color: #A63D65;
+}
+
+/* ===== MEJORAS VISUALES ECOCITY ===== */
+
+/* Suavizar el aspecto general */
+body {
+    background: linear-gradient(135deg, #e8f5e9, #f1f8e9);
+}
+
+/* Encabezados */
+header {
+    box-shadow: 0 4px 15px rgba(0, 80, 40, 0.12);
+}
+
+/* Título del juego */
+h1 {
+    color: #176b3a;
+    font-weight: 800;
+    letter-spacing: 1px;
+}
+
+/* Tablero */
+#tablero {
+    padding: 12px;
+    background: white;
+    border-radius: 18px;
+    box-shadow: 0 8px 25px rgba(0, 80, 40, 0.12);
+}
+
+/* Letras */
+.letra {
+    border-radius: 8px;
+    transition: transform 0.15s ease, background 0.2s ease;
+}
+
+.letra:hover {
+    transform: scale(1.08);
+}
+
+/* Botones */
+.boton-principal,
+#boton-reiniciar {
+    border-radius: 12px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.boton-principal:hover,
+#boton-reiniciar:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 80, 40, 0.18);
+}
+
+/* Paneles */
+#lista-palabras,
+#resultado {
+    border-radius: 14px;
+}
+
+/* ===== EFECTO DE VICTORIA ===== */
+
+#resultado.victoria {
+    color: #176b3a;
+    background: #d9f7df;
+    border: 2px solid #42b96a;
+    border-radius: 16px;
+    padding: 20px;
+    font-weight: 800;
+    text-align: center;
+    animation: celebrar 0.7s ease;
+}
+
+@keyframes celebrar {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    70% {
+        transform: scale(1.08);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* ===== PANTALLA DE BIENVENIDA ===== */
+
+.pantalla-bienvenida {
+    background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+    padding: 35px 20px;
+    border-radius: 22px;
+    margin: 25px auto;
+    text-align: center;
+    box-shadow: 0 8px 25px rgba(0, 80, 40, 0.12);
+}
+
+.bienvenida-contenido {
+    max-width: 600px;
+    margin: auto;
+}
+
+.bienvenida-icono {
+    font-size: 65px;
+}
+
+.bienvenida-contenido h2 {
+    color: #176b3a;
+    font-size: 30px;
+    margin: 12px 0;
+}
+
+.bienvenida-contenido h3 {
+    color: #287d4b;
+}
+
+.bienvenida-contenido p {
+    line-height: 1.6;
+}
+
+.instrucciones {
+    background: rgba(255, 255, 255, 0.75);
+    padding: 12px;
+    border-radius: 14px;
+    margin: 20px 0;
+}
+
+.instrucciones p {
+    margin: 8px;
+}
+
+#boton-comenzar {
+    padding: 14px 28px;
+    font-size: 16px;
+    cursor: pointer;
+}
+/* ===== CELEBRACIÓN DE VICTORIA ===== */
+
+#resultado.victoria {
+    background: linear-gradient(135deg, #d8f3dc, #b7e4c7);
+    border: 2px solid #52b788;
+    border-radius: 20px;
+    padding: 25px;
+    margin-top: 25px;
+    text-align: center;
+    animation: celebrar 0.7s ease;
+}
+
+.celebracion h2 {
+    color: #176b3a;
+    font-size: 28px;
+    margin: 10px 0;
+}
+
+.celebracion h3 {
+    color: #e09f00;
+    font-size: 25px;
+}
+
+.celebracion p {
+    color: #245c3b;
+    font-size: 17px;
+}
+
+.trofeo {
+    font-size: 65px;
+    animation: trofeo 1.2s infinite alternate;
+}
+
+.confeti {
+    font-size: 28px;
+    margin-top: 15px;
+}
+
+@keyframes trofeo {
+    from {
+        transform: scale(1);
+    }
+    to {
+        transform: scale(1.2) rotate(8deg);
+    }
+}
+
+@keyframes celebrar {
+    from {
+        opacity: 0;
+        transform: scale(0.85);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
